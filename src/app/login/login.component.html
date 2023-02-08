@@ -1,0 +1,8 @@
+<div class="center" >
+    <form class="center" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" >
+     <input class="auto-complete" type="text" placeholder="username" formControlName="username"  >
+     <input type="password" placeholder="password" formControlName="password">
+     <button type="submit" >login</button>
+     <button routerLink="/register" >Register</button>
+    </form>
+  </div>
