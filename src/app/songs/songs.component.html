@@ -1,3 +1,39 @@
-<div>
-    <h1>Welcome to song component</h1>
+<h1>Welcome to song page.</h1>
+<div >
+
+    <div  >
+        <form
+          
+          [formGroup]="songForm"
+          (ngSubmit)="onSubmit(songForm.value)"
+        >
+          <input
+            class="auto-complete"
+            type="text"
+            placeholder="Song name"
+            formControlName="songName"
+          />
+          <button type="submit">Post Song</button>
+        </form>
+      </div>
+      
+<div style="margin-top: 1cm;" >
+    <h2>Songs list</h2>
+    <table class="border" >
+        <thead>
+            <tr>
+                <th> Song name </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of songData" >
+                
+                <td>
+                 {{data.songName}}
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+    
 </div>
